@@ -5,7 +5,14 @@ const VideoDetails = ({ video }) => {
     return <div>Loading...</div>;
   }
 
-  return <div>{video.snippet.title}</div>;
+  return (
+    <div className="ui segment">
+      <div className="header">
+        <h4>{video.snippet.title}</h4>
+        <p>{video.snippet.description}</p>
+      </div>
+    </div>
+  );
 };
 
 export default VideoDetails;
